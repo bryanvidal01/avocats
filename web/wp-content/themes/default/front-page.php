@@ -1,30 +1,103 @@
 <?php
 
 get_header();
-get_header('nav');
 ?>
-    <main id="main" class="main" data-module="homePage" data-context="@visible true">
 
-    <?php
+<div class="hero">
+    <img src="<?= get_template_directory_uri(); ?>/medias/hero.jpg" class="img-hero" alt="">
 
-    if ( have_posts() ) :
+    <div class="content-hero">
+        <p>Notre mission</p>
+        <div class="title-h1">
+            nous défendons<br/>
+            <span class="italic">la liberté par-delà</span><br/>
+            les frontières<br/>
+            <span class="italic">en droit de la famille.</span>
+        </div>
 
-        while ( have_posts() ) :
-            the_post();
+        <div class="scroll-bottom">
+            <p>Scroll</p>
+        </div>
+    </div>
+</div>
 
-            get_template_part( 'template-parts/content', 'post' );
+<div class="section-presentation container-gutters">
+    <div class="deco">
+        <img src="<?= get_template_directory_uri(); ?>/assets/img/deco-bloc-1.svg" alt="">
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="introduction-section">
+                    Nos valeurs
+                </div>
+                <div class="title-h2">
+                    Nous croyons que<br/>
+                    <i>la famille, quelle<br/>
+                        que soit sa forme,</i> est le Corps intermédiaire <i>entre l’État et l’Individu.</i>
+                </div>
+            </div>
+            <div class="col-sm-6 text-right">
+                <img src="<?= get_template_directory_uri(); ?>/medias/01.png" class="section-presentation-image-1" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="<?= get_template_directory_uri(); ?>/medias/02.jpg" class="section-presentation-image-2" alt="">
+            </div>
+            <div class="col-sm-5">
+                <div class="info-container">
+                    <p>
+                        Avocats de la famille car nous croyons que la famille, quelle que soit sa forme, est le Corps intermédiaire entre l’État et l’Individu, permet la sociabilisation, la transmission et l’apprentissage
+                        de la solidarité parmi tant d’autres fonctions.
+                        Les crises la traversent pouvant se régler par l’écoute, la négociation et en cas d’échec par le recours à la justice
+                    </p>
+                    <a href="" class="button">
+                        Découvrez notre cabinet
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-        endwhile;
 
-    endif;
-    ?>
-        <br>
-        <a href="" class="rgpd-link">Manage cookies</a>
-    </main>
+<div class="section-citation">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="title-h2">
+                    C’est l’expérience de la vie<br/>
+                    des avocats associés de <i>Chauveau Mulon & Associés</i>, leur parcours personnel et professionnel, <i>ainsi que leur personnalité </i>qui ont permis d’établir une vision commune de leur métier d’avocat.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<?php
-    get_template_part( 'template-parts/general/block', 'rgpd');
-?>
+
+<section id="sectionPin">
+    <div class="pin-wrap">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+        <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+        <img src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+        <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+    </div>
+</section>
+
+<div class="section-scroll-x">
+    <div class="item">
+        <div class="image-1">
+            <img src="<?= get_template_directory_uri(); ?>/medias/04.jpg" alt="">
+        </div>
+        <div class="image-2">
+            <img src="<?= get_template_directory_uri(); ?>/medias/06.jpg" alt="">
+        </div>
+        <div class="image-3">
+            <img src="<?= get_template_directory_uri(); ?>/medias/05.jpg" alt="">
+        </div>
+    </div>
+</div>
 
 <?php
 get_footer();

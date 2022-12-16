@@ -1,0 +1,80 @@
+header{
+  padding: 2vw 3vw;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 100;
+  top: 0;
+
+  .logo{
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+  }
+  ul{
+    padding-top: 1vw;
+    li{
+      display: inline-block;
+      margin-right: 1.8vw;
+
+      &.last{
+        margin-right: 0;
+      }
+
+      &.low-space{
+        margin-right: .5vw;
+      }
+      &.lang{
+        opacity: .6;
+
+        &.active{
+          opacity: 1;
+        }
+      }
+      a{
+        text-transform: uppercase;
+        font-size: .9vw;
+        color: $color-dark-beige;
+
+        &:hover{
+          color: $color-dark-beige;
+        }
+      }
+
+      .button{
+        color: $color-dark-beige;
+        border-color: $color-dark-beige;
+        padding: .8vw 1.8vw;
+        font-size: .9vw;
+        font-weight: 400;
+      }
+
+      .button-menu{
+        background: transparent;
+        border: 0;
+        color: $color-dark-beige;
+        font-size: .9vw;
+        text-transform: uppercase;
+        padding-right: 2.3vw;
+        position: relative;
+
+        &:before,
+        &:after{
+          content: '';
+          width: 1.2vw;
+          height: 1px;
+          background: $color-dark-beige;
+          position: absolute;
+          right: 0;
+        }
+
+        &:before{
+          top: calc(50% - 0.2vw);
+        }
+        &:after{
+          top: calc(50% + 0.2vw);
+        }
+      }
+    }
+  }
+}
