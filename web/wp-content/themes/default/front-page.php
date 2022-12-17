@@ -97,7 +97,7 @@ get_header();
                     y compris les enlèvements d’enfants.
                 </p>
             </div>
-            <div class="item-presentation">
+            <div class="item-presentation" id="div1">
                 <div class="image-1">
                     <img src="<?= get_template_directory_uri(); ?>/medias/04.jpg" alt="">
                 </div>
@@ -112,7 +112,7 @@ get_header();
                     y compris les enlèvements d’enfants.
                 </p>
             </div>
-            <div class="item-presentation">
+            <div class="item-presentation" id="div2">
                 <div class="image-1">
                     <img src="<?= get_template_directory_uri(); ?>/medias/04.jpg" alt="">
                 </div>

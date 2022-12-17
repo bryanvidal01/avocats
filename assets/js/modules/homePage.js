@@ -1,10 +1,13 @@
 import LocomotiveScroll from 'locomotive-scroll';
+import jquery from 'jquery';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default homePage => {
+
+
     var container = document.querySelector('[data-scroll-container]');
 
     const scroll = new LocomotiveScroll({
@@ -27,6 +30,7 @@ export default homePage => {
     });
 
     scroll.on("scroll", ScrollTrigger.update);
+
 
     ScrollTrigger.scrollerProxy(container, {
         scrollTop(value) {
@@ -52,10 +56,11 @@ export default homePage => {
 
     function initHorizontalSections() {
         let horizontalSections = document.querySelectorAll('.scroll-X');
+
         horizontalSections.forEach((el) => {
 
-            console.log(el);
             const width = el.offsetWidth;
+            
             const horizontalScrollLength = width - window.innerWidth;
 
             if (el.hasAttribute('data-scroll-reverse')) {
@@ -69,7 +74,6 @@ export default homePage => {
 
                 return `-=${horizontalScrollLength}`;
             }
-
 
 
             gsap.to(el, {
