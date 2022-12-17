@@ -201,7 +201,9 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> data-module="bugReport">
+<body <?php body_class(); ?> data-module="homePage">
+
+<div data-scroll-container>
 
 <header>
     <div class="container-fluid">
