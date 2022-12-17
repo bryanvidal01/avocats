@@ -159,6 +159,8 @@ section {
 
 
 .presentation-section{
+  width: 100%;
+  overflow: hidden;
   .item-presentation{
     position: relative;
     .image-1{
@@ -205,10 +207,26 @@ section {
   }
 
   .markee{
+    color: $color-dark-beige;
     position: fixed;
     top: 50%;
     left: 50%;
+    mix-blend-mode: revert;
     transform: translate(-50%, -50%);
     z-index: 30;
+    overflow: hidden;
+    transition: .0s;
+    .text-inner{
+      transform: translateY(100%);
+
+      &.visible{
+        transform: translateY(0%);
+        transition: .200s;
+      }
+      &.remove{
+        transform: translateY(-100%);
+        transition: .200s;
+      }
+    }
   }
 }

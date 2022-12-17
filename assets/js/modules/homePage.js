@@ -94,7 +94,43 @@ export default homePage => {
         ScrollTrigger.refresh();
     }
 
+    // active section
 
+    const sub_sections = document.querySelectorAll('.js-scroll-X-subsection');
+    const wording = document.querySelector('.js-wording .text-inner');
+    const offset = window.innerWidth / 2;
+    var active_section = sub_sections[0];
+    var active_section_tmp = sub_sections[0];
+
+    scroll.on('scroll', () => {
+        sub_sections.forEach((sub_section) => {
+            const left = sub_section.getBoundingClientRect().left;
+            if (left < offset) {
+                active_section = sub_section;
+                return;
+            }
+        });
+
+
+        if (active_section !== active_section_tmp) {
+            const title = active_section.getAttribute('data-title');
+            wording.classList.add("remove");
+            setTimeout(function(){
+                wording.innerHTML = title;
+                setTimeout(function(){
+                    wording.classList.remove("remove");
+                    wording.classList.remove("visible");
+
+                    setTimeout(function(){
+                        wording.classList.add("visible");
+                    }, 100);
+                }, 0);
+            }, 100);
+            active_section_tmp = active_section;
+
+            console.log('section active : ', active_section);
+        }
+    });
 
 
 
