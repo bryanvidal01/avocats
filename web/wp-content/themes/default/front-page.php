@@ -76,15 +76,8 @@ get_header();
 </div>
 
 
-<section id="sectionPin">
-    <div class="pin-wrap">
-        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-        <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
-        <img src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
-        <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
-    </div>
-</section>
 
+<!--
 <div class="section-scroll-x">
     <div class="item">
         <div class="image-1">
@@ -95,6 +88,21 @@ get_header();
         </div>
         <div class="image-3">
             <img src="<?= get_template_directory_uri(); ?>/medias/05.jpg" alt="">
+        </div>
+    </div>
+</div>-->
+
+
+<div class="section-citation with-image">
+    <img src="<?= get_template_directory_uri(); ?>/medias/07.jpg" class="image-bg" alt="">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="title-h2">
+                    C’est l’expérience de la vie<br/>
+                    des avocats associés de <i>Chauveau Mulon & Associés</i>, leur parcours personnel et professionnel, <i>ainsi que leur personnalité </i>qui ont permis d’établir une vision commune de leur métier d’avocat.
+                </div>
+            </div>
         </div>
     </div>
 </div>
