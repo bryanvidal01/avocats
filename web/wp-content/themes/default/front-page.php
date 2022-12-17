@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-<div class="hero" data-module="homePage" data-scroll-section>
+<div class="hero">
     <img src="<?= get_template_directory_uri(); ?>/medias/hero.jpg" class="img-hero" alt="">
 
     <div class="content-hero">
@@ -21,22 +21,8 @@ get_header();
     </div>
 </div>
 
-    <div data-scroll-container>
-        <div data-scroll-section>
-            <h1 data-scroll>Hey</h1>
-            <p data-scroll>👋</p>
-        </div>
-        <div data-scroll-section>
-            <h2 data-scroll data-scroll-speed="1">What's up?</h2>
-            <p data-scroll data-scroll-speed="2">😬</p>
-        </div>
-    </div>
 
-
-
-
-
-<div class="section-presentation container-gutters">
+<div class="section-presentation container-gutters" >
     <div class="deco">
         <img src="<?= get_template_directory_uri(); ?>/assets/img/deco-bloc-1.svg" alt="">
     </div>
@@ -90,6 +76,19 @@ get_header();
     </div>
 </div>
 
+
+    <section>
+        <div class="scroll-X">
+            <div>
+                <div class="toto" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A earum enim expedita fugiat hic illo, in laboriosam laborum minus molestias mollitia natus necessitatibus obcaecati quibusdam, quo repellendus sed sunt vel.
+                </div>
+            </div>
+            <div>3</div>
+            <div>4</div>
+            <div>4</div>
+        </div>
+    </section>
 
 
 <!--
