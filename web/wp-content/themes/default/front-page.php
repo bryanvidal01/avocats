@@ -77,16 +77,57 @@ get_header();
 </div>
 
 
-    <section>
+    <section class="presentation-section">
+        <div class="markee title-h1 big">
+            International
+        </div>
         <div class="scroll-X">
-            <div>
-                <div class="toto" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A earum enim expedita fugiat hic illo, in laboriosam laborum minus molestias mollitia natus necessitatibus obcaecati quibusdam, quo repellendus sed sunt vel.
+            <div class="item-presentation">
+                <div class="image-1">
+                    <img src="<?= get_template_directory_uri(); ?>/medias/04.jpg" alt="">
                 </div>
+                <div class="image-2">
+                    <img src="<?= get_template_directory_uri(); ?>/medias/06.jpg" alt="">
+                </div>
+                <div class="image-3">
+                    <img src="<?= get_template_directory_uri(); ?>/medias/05.jpg" alt="">
+                </div>
+                <p class="wording-presentation">
+                    Nous vous assistons dans toutes les problématiques du droit de la famille en France et à l’étranger,
+                    y compris les enlèvements d’enfants.
+                </p>
             </div>
-            <div>3</div>
-            <div>4</div>
-            <div>4</div>
+            <div class="item-presentation">
+                <div class="image-1">
+                    <img src="<?= get_template_directory_uri(); ?>/medias/04.jpg" alt="">
+                </div>
+                <div class="image-2">
+                    <img src="<?= get_template_directory_uri(); ?>/medias/06.jpg" alt="">
+                </div>
+                <div class="image-3">
+                    <img src="<?= get_template_directory_uri(); ?>/medias/05.jpg" alt="">
+                </div>
+                <p class="wording-presentation">
+                    Nous vous assistons dans toutes les problématiques du droit de la famille en France et à l’étranger,
+                    y compris les enlèvements d’enfants.
+                </p>
+            </div>
+            <div class="item-presentation">
+                <div class="image-1">
+                    <img src="<?= get_template_directory_uri(); ?>/medias/04.jpg" alt="">
+                </div>
+                <div class="image-2">
+                    <img src="<?= get_template_directory_uri(); ?>/medias/06.jpg" alt="">
+                </div>
+                <div class="image-3">
+                    <img src="<?= get_template_directory_uri(); ?>/medias/05.jpg" alt="">
+                </div>
+                <p class="wording-presentation">
+                    Nous vous assistons dans toutes les problématiques du droit de la famille en France et à l’étranger,
+                    y compris les enlèvements d’enfants.
+                </p>
+            </div>
+
         </div>
     </section>
 

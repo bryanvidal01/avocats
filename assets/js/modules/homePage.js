@@ -53,6 +53,8 @@ export default homePage => {
     function initHorizontalSections() {
         let horizontalSections = document.querySelectorAll('.scroll-X');
         horizontalSections.forEach((el) => {
+
+            console.log(el);
             const width = el.offsetWidth;
             const horizontalScrollLength = width - window.innerWidth;
 
@@ -67,6 +69,8 @@ export default homePage => {
 
                 return `-=${horizontalScrollLength}`;
             }
+
+
 
             gsap.to(el, {
                 scrollTrigger: {
@@ -85,6 +89,9 @@ export default homePage => {
 
         ScrollTrigger.refresh();
     }
+
+
+
 
 
 };

@@ -149,22 +149,66 @@ section {
     justify-content: flex-start;
     align-items: center;
 
-    & > * {
-      height: 100%;
-      width: 100vw;
 
-      &:nth-of-type(1) {
-        background-color: grey;
-      }
-
-      &:nth-of-type(2) {
-        background-color: black;
-      }
-
-    }
   }
 
   [data-scroll-reverse] {
     justify-content: flex-end;
+  }
+}
+
+
+.presentation-section{
+  .item-presentation{
+    position: relative;
+    .image-1{
+      height: 35vh;
+      left: 10%;
+      top: 5%;
+      position: absolute;
+      img{
+        height: 100%;
+      }
+    }
+    .image-2{
+      height: 76vh;
+      left: 50%;
+      top: 12vh;
+      transform: translateX(-50%);
+      position: absolute;
+      img{
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    .image-3{
+      height: 35vh;
+      right: 10%;
+      bottom: 5%;
+      position: absolute;
+      img{
+        height: 100%;
+      }
+    }
+  }
+
+  .wording-presentation{
+    width: 20%;
+    right: 10%;
+    top: 12%;
+    position: absolute;
+  }
+  .item-presentation{
+    height: 100%;
+    width: 100vw;
+  }
+
+  .markee{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
   }
 }
