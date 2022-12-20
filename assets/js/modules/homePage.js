@@ -3,9 +3,28 @@ import jquery from 'jquery';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import Swiper from 'swiper';
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default homePage => {
+
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        speed : 600,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
+
+    jQuery('.next-slider').click(function(){
+        swiper.slidePrev();
+    });
+    jQuery('.prev-slider').click(function(){
+        swiper.slideNext();
+    });
 
 
     var container = document.querySelector('[data-scroll-container]');
@@ -13,7 +32,7 @@ export default homePage => {
     const scroll = new LocomotiveScroll({
         el: container,
         smooth: true,
-        offset: ['20%', '0'],
+        offset: ['00%', '0'],
         getDirection: true,
         lerp: 0.1,
         multiplier: 1,
@@ -131,6 +150,10 @@ export default homePage => {
             console.log('section active : ', active_section);
         }
     });
+
+
+
+
 
 
 

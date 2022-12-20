@@ -1,0 +1,47 @@
+footer{
+  .button{
+    margin-top: 2vw;
+  }
+
+  .wins-footer{
+    width: 50%;
+  }
+
+  .container-footer-principal{
+    border-top: 1px solid $color-dark-beige;
+    padding-bottom: 6vw;
+    padding-top: 4vw;
+  }
+
+  .copyright{
+    font-size: 0.8vw;
+  }
+
+  .partners-footer{
+    width: 60%;
+    position: relative;
+    top: -0.9vw;
+  }
+
+  .link-mentions{
+    color: $color-dark-blue;
+    text-decoration: underline;
+    font-size: 0.8vw;
+    display: block;
+  }
+
+  .social-links{
+    text-align: center;
+    position: relative;
+    top: -0.7vw;
+
+    li{
+      display: inline-block;
+      margin: 0 1vw;
+
+      img{
+        width: 1.3vw;
+      }
+    }
+  }
+}
