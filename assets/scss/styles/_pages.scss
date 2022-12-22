@@ -55,6 +55,18 @@
       }
     }
   }
+
+  &.about{
+    .content-hero{
+      bottom: auto;
+      top: 50%;
+      transform: translateY(-50%);
+
+      .title-h1{
+        color: #FFF;
+      }
+    }
+  }
 }
 
 
@@ -84,6 +96,7 @@
   }
   .section-presentation-image-2{
     width: 100%;
+
   }
 
   .info-container{
@@ -93,6 +106,25 @@
       display: block;
       text-align: center;
       margin-top: 4vw;
+    }
+  }
+
+  &.about{
+    padding-bottom: 10vw;
+    .section-presentation-image-2{
+      width: 65%;
+      margin-left: auto;
+      display: block;
+      padding-top: 7vw;
+    }
+    .section-presentation-image-1{
+      width: 35%;
+    }
+    .info-container{
+      padding-bottom: 0;
+      padding-left: 10vw;
+      padding-top: 7vw;
+      padding-right: 0vw;
     }
   }
 }
@@ -443,6 +475,121 @@ section {
       display: inline-block;
       margin-left: .6vw;
       margin-right: .6vw;
+    }
+  }
+}
+
+
+.strate-teams{
+  margin-bottom: 8vw;
+  .title-section{
+    border-top: 1px solid $color-dark-beige;
+    padding-top: 4vw;
+  }
+}
+
+.push-team{
+  margin-top: 4vw;
+  .push-team-image{
+    width: 100%;
+    margin-bottom: 2vw;
+  }
+
+  .push-team-name{
+    text-transform: none;
+  }
+  .push-team-sub-name{
+    font-style: italic;
+  }
+  .push-team-post{
+    color: $color-dark-gold;
+    margin-top: 1.5vw;
+    font-size: 1.2vw;
+  }
+}
+
+.strate-related-pushs.container-gutters{
+  padding-bottom: 8vw;
+}
+
+.push-related{
+  position: relative;
+
+  &:after{
+    content: '';
+    background: rgba(#000, .6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .push-related-title{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 8vw;
+    text-align: center;
+    padding: 5vw 0;
+    z-index: 5;
+    color: $color-light-gold;
+  }
+
+  .push-related-image{
+    width: 100%;
+  }
+
+  .push-related-link{
+    position: absolute;
+    bottom: 8vw;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $color-light-gold;
+    border-color: $color-light-gold;
+    z-index: 4;
+  }
+}
+
+.container-expertises{
+  margin-top: 6vw;
+  margin-bottom: 8vw;
+  .image-expertise{
+    width: 100%;
+  }
+
+  .container-image-expertise{
+    position: relative;
+
+    &:after{
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: rgba(#0E153F, .8);
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+  .container-expertise-item{
+    margin-top: 6vw;
+
+    .content-expertise{
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0 8vw;
+
+      .title-h2{
+        margin-bottom: 2vw;
+      }
+      p{
+        max-width: 60%;
+      }
+
+      .button{
+        margin-top: 1vw;
+      }
     }
   }
 }
