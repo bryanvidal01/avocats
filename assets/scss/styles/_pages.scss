@@ -593,3 +593,52 @@ section {
     }
   }
 }
+
+
+.hero-single-competence.container-gutters{
+  padding-top: 10vw;
+  padding-bottom: 6vw;
+}
+
+.strate-image-full{
+  margin-bottom: 5vw;
+  img{
+    width: 100%;
+  }
+}
+
+.strate-titre-center{
+  margin-bottom: 5vw;
+}
+
+.strate-image-text{
+  margin-bottom: 5vw;
+  .container-image{
+    padding: 0 7vw;
+    img{
+      width: 100%;
+    }
+  }
+
+  .container-text{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.strate-text-left{
+  margin-bottom: 5vw;
+}
+
+.container-items-competences{
+  margin: 0 4vw;
+  border-top: 1px solid $color-dark-beige;
+}
+.strate-slider-competences{
+  .introduction-section{
+    position: fixed;
+    top: 3.8vh;
+    left: 4vw;
+  }
+}
