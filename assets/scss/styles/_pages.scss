@@ -642,3 +642,30 @@ section {
     left: 4vw;
   }
 }
+
+.section-pushs-honoraires{
+  margin-bottom: 5vw;
+}
+.push-honoraire{
+  position: relative;
+
+  img{
+    width: 100%;
+  }
+  .title-h2{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: $color-light-gold;
+  }
+
+  .push-honoraire-price{
+    position: absolute;
+    bottom: 4vw;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+  }
+}
