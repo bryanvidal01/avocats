@@ -152,6 +152,10 @@ export default homePage => {
     });
 
 
+    $('.button-menu').click(function(){
+       $('body').toggleClass('nav-open');
+    });
+
 
 
 

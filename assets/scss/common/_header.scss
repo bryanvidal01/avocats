@@ -13,6 +13,7 @@ header{
   }
   ul{
     padding-top: 1vw;
+    padding-right: 5vw;
     li{
       display: inline-block;
       margin-right: 1.8vw;
@@ -48,33 +49,100 @@ header{
         font-size: .9vw;
         font-weight: 400;
       }
+    }
+  }
+}
 
-      .button-menu{
-        background: transparent;
-        border: 0;
-        color: $color-dark-beige;
-        font-size: .9vw;
-        text-transform: uppercase;
-        padding-right: 2.3vw;
-        position: relative;
+.button-menu{
+  background: transparent;
+  border: 0;
+  color: $color-dark-beige;
+  font-size: .9vw;
+  text-transform: uppercase;
+  padding-right: 2.3vw;
+  position: absolute;
+  z-index: 1000;
+  right: 4vw;
+  top: 3.8vw;
 
-        &:before,
-        &:after{
-          content: '';
-          width: 1.2vw;
-          height: 1px;
-          background: $color-dark-beige;
-          position: absolute;
-          right: 0;
-        }
+  &:before,
+  &:after{
+    content: '';
+    width: 1.2vw;
+    height: 1px;
+    background: $color-dark-beige;
+    position: absolute;
+    right: 0;
+  }
 
-        &:before{
-          top: calc(50% - 0.2vw);
-        }
-        &:after{
-          top: calc(50% + 0.2vw);
-        }
-      }
+  &:before{
+    top: calc(50% - 0.2vw);
+  }
+  &:after{
+    top: calc(50% + 0.2vw);
+  }
+}
+
+
+.menu-fixed{
+  background: $color-light-beige;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 800;
+  height: 100vh;
+  display: none;
+
+  .decoration{
+    position: absolute;
+    height: 80vh;
+    top: 10vh;
+    left: 20vw;
+  }
+
+  .logo{
+    position: fixed;
+    top: 2vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .container-menu-sub{
+    position: absolute;
+    bottom: 6vw;
+    left: 4vw;
+    width: 66%;
+
+    li{
+      width: 45%;
+      margin-bottom: 2.5vw;
+      display: inline-block;
+    }
+  }
+
+  .sub-section{
+    width: 26%;
+    position: absolute;
+    bottom: 10vw;
+    right: 4vw;
+    text-align: right;
+    img{
+      width: 50%;
+    }
+  }
+}
+
+.nav-open{
+  .menu-fixed{
+    display: block;
+  }
+
+  .button-menu{
+    color: $color-dark-blue;
+
+    &:before, &:after{
+      background-color: $color-dark-blue;
     }
   }
 }

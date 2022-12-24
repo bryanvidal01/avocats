@@ -203,7 +203,84 @@
 
 <body <?php body_class(); ?> data-module="homePage">
 
-<div data-scroll-container>
+<div class="menu-fixed hidden" data-scroll data-scroll-sticky data-scroll-target="#scroll-container">
+
+    <a href="<?= get_site_url(); ?>">
+        <img src="<?= get_template_directory_uri(); ?>/assets/img/logo-dark.svg" class="logo" alt="">
+    </a>
+
+    <div class="decoration">
+        <img src="<?= get_template_directory_uri(); ?>/assets/img/deco-bloc-1.svg" alt="">
+    </div>
+
+    <div class="container-menu-sub">
+        <ul>
+            <li>
+                <a href="" class="title-h2">À propos</a>
+            </li>
+            <li>
+                <a href="" class="title-h2">Honoraires</a>
+            </li>
+            <li>
+                <a href="" class="title-h2">Expertises</a>
+            </li>
+            <li>
+                <a href="" class="title-h2">Actualité</a>
+            </li>
+        </ul>
+    </div>
+    <div class="sub-section">
+        <img src="<?= get_template_directory_uri(); ?>/medias/book.png" alt="">
+        <p>
+            CABINET<br/>
+            CHAUVEAU MULON & ASSOCIÉS<br/>
+            27 rue Duret, 75116 Paris<br/>
+            Tél. : +33 1 42 68 24 24<br/>
+            Fax : +33 1 42 68 24 30
+        </p>
+        <img src="<?= get_template_directory_uri(); ?>/assets/img/certif-2.png" alt="">
+    </div>
+
+    <div class="sub-footer">
+        <div class="row">
+            <div class="col-sm-4">
+                <p class="copyright"> © Chauveau Mulon & Associés 2023 | Tous droits réservés</p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <img src="<?= get_template_directory_uri(); ?>/medias/partners.png" class="partners-footer" alt="">
+            </div>
+            <div class="col-sm-2">
+                <ul class="social-links">
+                    <li>
+                        <a href="">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/img/facebook.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/img/instagram.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="<?= get_template_directory_uri(); ?>/assets/img/linkedin.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-2 text-right">
+                <a href="" class="link-mentions">Mentions légales</a>
+            </div>
+        </div>
+    </div>
+
+    <button class="button-menu">
+        <div class="wording">Menu</div>
+    </button>
+
+</div>
+
+<div id="scroll-container"" data-scroll-container>
 
 <header>
     <div class="container-fluid">
