@@ -203,6 +203,93 @@
 
 <body <?php body_class(); ?> data-module="homePage">
 
+<div class="popin-contact">
+    <div class="popin-contact-image">
+        <img src="<?= get_template_directory_uri(); ?>/medias/28.jpg" alt="">
+    </div>
+    <div class="container-form">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="title-h2">
+                        Nous<br/>
+                        <i>contacter</i>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/img/picto-cross.svg" class="close-popin" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>
+                        CABINET<br/>
+                        CHAUVEAU MULON & ASSOCIÉS<br/>
+                        27 rue Duret, 75116 Paris<br/>
+                        Tél. : +33 1 42 68 24 24<br/>
+                        Fax : +33 1 42 68 24 30<br/>
+                    </p>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <a href="" class="button">
+                        Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <form class="row form-contact">
+                <div class="col-sm-6">
+                    <label>
+                        <span class="text-label">Nom</span>
+                        <input type="text">
+                    </label>
+                </div>
+                <div class="col-sm-6">
+                    <label>
+                        <span class="text-label">Prénom</span>
+                        <input type="text">
+                    </label>
+                </div>
+                <div class="col-sm-6">
+                    <label>
+                        <span class="text-label">Téléphone</span>
+                        <input type="text">
+                    </label>
+                </div>
+                <div class="col-sm-6">
+                    <label>
+                        <span class="text-label">Adresse e-mail</span>
+                        <input type="text">
+                    </label>
+                </div>
+                <div class="col-sm-12">
+                    <label>
+                        <select name="pets" id="pet-select">
+                            <option value="">Please choose an option</option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="parrot">Parrot</option>
+                            <option value="spider">Spider</option>
+                            <option value="goldfish">Goldfish</option>
+                        </select>
+
+                    </label>
+                </div>
+                <div class="col-sm-12">
+                    <label>
+                        <span class="text-label">Votre message</span>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </label>
+                </div>
+                <div class="col-sm-12 text-right">
+                    <button type="submit" class="button">Envoyer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <div class="menu-fixed hidden" data-scroll data-scroll-sticky data-scroll-target="#scroll-container">
 
     <a href="<?= get_site_url(); ?>">
@@ -327,7 +414,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" class="button">Contact</a>
+                        <a href="" class="button open-contact">Contact</a>
                     </li>
                     <li class="last">
                         <button class="button-menu">

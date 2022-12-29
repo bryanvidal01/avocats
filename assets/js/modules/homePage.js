@@ -156,6 +156,47 @@ export default homePage => {
        $('body').toggleClass('nav-open');
     });
 
+    // Forms
+    $('input, textarea').click(function(){
+        var el = $(this);
+
+        el.parent().addClass('selected');
+    });
+
+    $('input, textarea').change(function(){
+        var el = $(this);
+
+        el.parent().addClass('selected');
+    });
+    $('input, textarea').focus(function(){
+        var el = $(this);
+
+        el.parent().addClass('selected');
+    });
+
+    $('input, textarea').focusout(function(){
+        var el = $(this);
+
+        if(el.val() == ''){
+            el.parent().removeClass('selected');
+        }
+    });
+
+    $('.open-contact').click(function(event){
+        event.preventDefault();
+
+        $('.popin-contact').fadeIn();
+    });
+
+    $('.close-popin').click(function(event){
+        event.preventDefault();
+
+        $('.popin-contact').fadeOut();
+    })
+
+
+
+
 
 
 
