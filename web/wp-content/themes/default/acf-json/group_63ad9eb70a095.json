@@ -3,10 +3,10 @@
     "title": "Single compétence",
     "fields": [
         {
-            "key": "field_63ad9ebdf2b38",
-            "label": "Titre de la compétence",
-            "name": "post",
-            "type": "wysiwyg",
+            "key": "field_63ade2be08a0a",
+            "label": "Image de l'expertise",
+            "name": "post_competence_image",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,11 +15,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_63ad9ebdf2b38",
@@ -73,7 +78,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array",
+                            "return_format": "id",
                             "preview_size": "thumbnail",
                             "library": "all",
                             "min_width": "",
@@ -117,7 +122,7 @@
                             "key": "field_63ad9f91f2b3e",
                             "label": "Contenu de la citation",
                             "name": "post_competence_content_citation_content",
-                            "type": "text",
+                            "type": "textarea",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -128,9 +133,9 @@
                             },
                             "default_value": "",
                             "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": ""
                         }
                     ],
                     "min": "",
@@ -248,7 +253,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "page"
+                "value": "expertises"
             }
         ]
     ],
@@ -260,5 +265,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1672323214
+    "modified": 1672341327
 }

@@ -596,7 +596,7 @@
             "key": "field_63ad9e083fe19",
             "label": "Image de la récompense",
             "name": "page_home_recompense_image",
-            "type": "text",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -605,11 +605,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_63ad9e233fe1a",
@@ -655,7 +660,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "default"
+                "value": "front-page.php"
             }
         ]
     ],
@@ -667,5 +672,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1672322708
+    "modified": 1672337412
 }

@@ -203,6 +203,7 @@
 
 <body <?php body_class(); ?> data-module="homePage">
 
+
 <div class="popin-contact">
     <div class="popin-contact-image">
         <img src="<?= get_template_directory_uri(); ?>/medias/28.jpg" alt="">
@@ -367,7 +368,7 @@
 
 </div>
 
-<div id="scroll-container"" data-scroll-container>
+<div id="scroll-container" data-scroll-container>
 
 <header>
     <div class="container-fluid">

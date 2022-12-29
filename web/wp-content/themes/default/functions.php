@@ -61,3 +61,28 @@ function scripts_site(){
 
     }
 }
+
+
+
+
+function getImageArray( $id, $size = null ) {
+
+    if ( $id ) {
+
+        $file = array();
+
+        if ( empty( $size ) ) {
+            $size = 'full';
+        }
+
+        $imageArray = wp_get_attachment_image_src( $id, $size );
+        $file['url']   = $imageArray[0];
+        $file['size']['width']   = $imageArray[1];
+        $file['size']['height']   = $imageArray[2];
+        $file['alt']   = get_post_meta( $id, '_wp_attachment_image_alt', true );
+        $file['title'] = get_the_title( $id );
+
+        return $file;
+
+    }
+}
