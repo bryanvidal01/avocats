@@ -669,3 +669,60 @@ section {
     color: #FFF;
   }
 }
+
+
+.popin-members{
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  z-index: 500;
+  overflow: auto;
+  background: rgba($color-dark-blue, .8);
+
+  .content-popin{
+    width: 50%;
+    background: $color-light-beige;
+    right: 0;
+    position: absolute;
+    padding: 3vw;
+    height: 100vh;
+
+    .image-user{
+      margin-bottom: 2vw;
+    }
+
+    h2{
+      font-size: 3vw;
+    }
+
+    .post{
+      display: inline-block;
+      color: $color-dark-gold;
+      font-size: 1vw;
+    }
+    p{
+      font-size: 1vw;
+    }
+
+    .button{
+      padding: 1.2vw 4vw 1vw;
+
+    }
+    .social{
+      display: inline-block;
+      margin-left: 1vw;
+      margin-bottom: 1vw;
+      li{
+        display: inline-block;
+        margin: 0 .4vw;
+
+        img{
+          width: 1vw;
+        }
+      }
+    }
+  }
+}

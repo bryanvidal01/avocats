@@ -192,7 +192,35 @@ export default homePage => {
         event.preventDefault();
 
         $('.popin-contact').fadeOut();
+        $('.popin-members').fadeOut();
     })
+
+
+    $('.push-team').click(function(){
+        var el = $(this);
+
+        var firstname = el.data('firstname');
+        var secondname = el.data('secondname');
+        var post = el.data('post');
+        var linkedin = el.data('linkedin');
+        var email = el.data('email');
+        var phone = el.data('phone');
+        var vcard = el.data('vcard');
+        var description = el.data('description');
+        var image = el.data('image');
+
+        $('.content-popin .name').html(firstname);
+        $('.content-popin .family-name').html(secondname);
+        $('.content-popin .post').html(post);
+        $('.content-popin .social a').attr('href', linkedin);
+        $('.content-popin .email').html(email);
+        $('.content-popin .phone').html(phone);
+        $('.content-popin .vcard').attr('href', vcard);
+        $('.content-popin .description').html(description);
+        $('.content-popin .image-user').attr('src', image);
+
+       $('.popin-members').fadeIn();
+    });
 
 
 

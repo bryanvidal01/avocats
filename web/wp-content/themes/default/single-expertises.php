@@ -5,9 +5,8 @@ get_header();
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
-                <a href="" class="button">
+                <a href="<?php echo get_post_type_archive_link('expertises'); ?>" class="button">
                     <?= __('retour', 'cresc'); ?>
-
                 </a>
             </div>
             <div class="col-sm-8 mx-auto text-center">
@@ -84,7 +83,7 @@ endif; ?>
             ?>
         </div>
 
-        <a href="" class="button all-know-cta">
+        <a href="<?php echo get_post_type_archive_link('expertises'); ?>" class="button all-know-cta">
             <?= __('Tous nos savoir-faire', 'cresc'); ?>
         </a>
     </section>

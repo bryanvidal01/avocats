@@ -17,7 +17,7 @@ function wpm_custom_post_type() {
         'show_in_rest'        => false,
         'hierarchical'        => true,
         'public'              => true,
-        'has_archive'         => false
+        'has_archive'         => true
     );
     register_post_type( 'expertises', $args );
 

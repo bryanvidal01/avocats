@@ -3,6 +3,25 @@
     "title": "Single compétence",
     "fields": [
         {
+            "key": "field_63adf4ca46693",
+            "label": "Courte description",
+            "name": "post_competence_short_desc",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_63ade2be08a0a",
             "label": "Image de l'expertise",
             "name": "post_competence_image",
@@ -265,5 +284,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1672341327
+    "modified": 1672344803
 }

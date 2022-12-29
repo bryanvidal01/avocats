@@ -17,7 +17,7 @@
                                 Tél. : +33 1 42 68 24 24<br/>
                                 Fax : +33 1 42 68 24 30
                             </p>
-                            <a href="" class="button">Envoyer un message</a>
+                            <a href="" class="button open-contact">Envoyer un message</a>
                         </div>
                         <div class="col-sm-4 text-right">
                             <img src="<?= get_template_directory_uri(); ?>/medias/wins.png" class="wins-footer" alt="">
