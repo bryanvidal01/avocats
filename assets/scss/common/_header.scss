@@ -6,8 +6,41 @@ header{
   z-index: 100;
   top: 0;
 
+  &.dark{
+    .button{
+      border-color: $color-dark-blue;
+      &:hover{
+        color: #FFF;
+      }
+    }
+
+    .button-menu{
+      color: $color-dark-blue;
+
+      &:before,&:after{
+        background-color: $color-dark-blue;
+      }
+    }
+    ul{
+      li{
+
+        &.is-active{
+          a{
+            border-color: $color-dark-blue;
+          }
+        }
+        a{
+          color: $color-dark-blue;
+
+          &:hover{
+            color: $color-dark-blue;
+          }
+        }
+      }
+    }
+  }
+
   .logo{
-    width: 70%;
     display: block;
     margin: 0 auto;
   }
@@ -17,6 +50,12 @@ header{
     li{
       display: inline-block;
       margin-right: 1.8vw;
+
+      &.is-active{
+        a{
+          border-bottom: 1px solid $color-dark-beige;
+        }
+      }
 
       &.last{
         margin-right: 0;
@@ -36,9 +75,13 @@ header{
         text-transform: uppercase;
         font-size: .9vw;
         color: $color-dark-beige;
+        padding-bottom: 0.6vw;
+        transition: .3s;
+        border-bottom: 1px solid transparent;
 
         &:hover{
           color: $color-dark-beige;
+          border-bottom: 1px solid $color-dark-beige;
         }
       }
 
@@ -118,6 +161,12 @@ header{
       width: 45%;
       margin-bottom: 2.5vw;
       display: inline-block;
+
+      a{
+        &:hover{
+          color: $color-dark-blue;
+        }
+      }
     }
   }
 
@@ -128,15 +177,13 @@ header{
     right: 4vw;
     text-align: right;
     img{
-      width: 50%;
+      width: 30%;
     }
   }
 }
 
 .nav-open{
-  .menu-fixed{
-    display: block;
-  }
+
 
   .button-menu{
     color: $color-dark-blue;
@@ -159,6 +206,7 @@ header{
   .close-popin{
     transition: .4s;
     cursor: pointer;
+    width: 4vw;
     &:hover{
       transform: rotate(90deg);
     }
@@ -188,6 +236,10 @@ header{
 
     .title-h2{
       margin-bottom: 2vw;
+    }
+
+    p{
+      font-size: .9vw;
     }
 
     .form-contact{
@@ -236,6 +288,10 @@ header{
       button{
         background: transparent;
         margin-top: 2vw;
+
+        &:hover{
+          background-color: $color-dark-blue;
+        }
       }
     }
   }
@@ -253,5 +309,16 @@ header{
     position: absolute;
     padding: 3vw;
     background: $color-light-beige;
+  }
+}
+
+.button-contact{
+  position: fixed;
+  z-index: 3;
+  right: 3vw;
+  bottom: 3vw;
+  cursor: pointer;
+  img{
+    width: 5vw;
   }
 }

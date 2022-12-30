@@ -169,6 +169,33 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_63ae14a77a1c3": {
+                    "key": "layout_63ae14a77a1c3",
+                    "name": "strate_teams",
+                    "label": "Strate équipe",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_63ae14b87a1c4",
+                            "label": "Equipe",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Ici sera positionné la strate équipe",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_63ada2998328d": {
                     "key": "layout_63ada2998328d",
                     "name": "strate_two_pushs",
@@ -279,6 +306,178 @@
                             "key": "field_63ada32383293",
                             "label": "Image du push 2",
                             "name": "strate_two_pushs_image_push_2",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_63ae150f7e93f": {
+                    "key": "layout_63ae150f7e93f",
+                    "name": "strate_two_pushs_link",
+                    "label": "Strate 2 grandes mises en avant avec lien",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_63ae150f7e940",
+                            "label": "Titre du push 1",
+                            "name": "strate_two_pushs_link_title_push_1",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_63ae150f7e941",
+                            "label": "Label du lien 1",
+                            "name": "strate_two_pushs_link_label_push_1",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_63ae15357e946",
+                            "label": "URL du lien 1",
+                            "name": "strate_two_pushs_link_url_push_1",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_63ae150f7e942",
+                            "label": "Image du push 1",
+                            "name": "strate_two_pushs_link_image_push_1",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_63ae15707e947",
+                            "label": "Titre du push 2",
+                            "name": "strate_two_pushs_link_title_push_2",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_63ae15757e948",
+                            "label": "Label du lien 2",
+                            "name": "strate_two_pushs_link_label_push_2",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_63ae157b7e949",
+                            "label": "URL du lien 2",
+                            "name": "strate_two_pushs_link_url_push_2",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_63ae15817e94a",
+                            "label": "Image du push 2",
+                            "name": "strate_two_pushs_link_image_push_2",
                             "type": "image",
                             "instructions": "",
                             "required": 0,
@@ -581,7 +780,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "array",
+                                    "return_format": "id",
                                     "preview_size": "thumbnail",
                                     "library": "all",
                                     "min_width": "",
@@ -605,7 +804,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "array",
+                                    "return_format": "id",
                                     "preview_size": "thumbnail",
                                     "library": "all",
                                     "min_width": "",
@@ -629,7 +828,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "array",
+                                    "return_format": "id",
                                     "preview_size": "thumbnail",
                                     "library": "all",
                                     "min_width": "",
@@ -659,6 +858,13 @@
                 "operator": "==",
                 "value": "pages\/about.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "pages\/honoraires.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -669,5 +875,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1672336901
+    "modified": 1672356466
 }

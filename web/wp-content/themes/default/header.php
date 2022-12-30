@@ -204,6 +204,10 @@
 <body <?php body_class(); ?> data-module="homePage">
 
 
+<div class="button-contact open-contact">
+    <img src="<?= get_template_directory_uri(); ?>/assets/img/button-contact.svg" alt="">
+</div>
+
 <div class="popin-contact">
     <div class="popin-contact-image">
         <img src="<?= get_template_directory_uri(); ?>/medias/28.jpg" alt="">
@@ -304,17 +308,15 @@
     <div class="container-menu-sub">
         <ul>
             <li>
-                <a href="" class="title-h2">À propos</a>
+                <a href="<?php echo get_the_permalink(get_field('params_page_about', 'option')); ?>" class="title-h2">À propos</a>
             </li>
             <li>
-                <a href="" class="title-h2">Honoraires</a>
+                <a href="<?php echo get_the_permalink(get_field('params_page_honoraires', 'option')); ?>" class="title-h2">Honoraires</a>
             </li>
             <li>
-                <a href="" class="title-h2">Expertises</a>
+                <a href="<?php echo get_post_type_archive_link('expertises'); ?>" class="title-h2">Expertises</a>
             </li>
-            <li>
-                <a href="" class="title-h2">Actualité</a>
-            </li>
+
         </ul>
     </div>
     <div class="sub-section">
@@ -370,41 +372,36 @@
 
 <div id="scroll-container" data-scroll-container>
 
-<header>
+<header<?= (is_singular('expertises')) ? ' class="dark"' : ''; ?>>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-5">
                 <ul>
-                    <li>
-                        <a href="">
-                            À propos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
+                    <?php if(get_field('params_page_about', 'option')): ?>
+                        <li <?= (get_field('params_page_about', 'option') == get_the_id()) ? 'class="is-active"' : ''; ?>>
+                            <a href="<?php echo get_the_permalink(get_field('params_page_about', 'option')); ?>">À propos</a>
+                        </li>
+                    <?php endif; ?>
+                    <li <?= (is_post_type_archive('expertises', 'option') || is_singular('expertises')) ? 'class="is-active"' : ''; ?>>
+                        <a href="<?php echo get_post_type_archive_link('expertises'); ?>">
                             Expertise
                         </a>
                     </li>
-                    <li>
-                        <a href="">
-                            Honoraires
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            Actualités
-                        </a>
-                    </li>
+                    <?php if(get_field('params_page_honoraires', 'option')): ?>
+                        <li <?= (get_field('params_page_honoraires', 'option') == get_the_id()) ? 'class="is-active"' : ''; ?>>
+                            <a href="<?php echo get_the_permalink(get_field('params_page_honoraires', 'option')); ?>">Honoraires</a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
             <div class="col-sm-2">
                 <a href="<?= get_site_url(); ?>">
-                    <img src="<?= get_template_directory_uri(); ?>/assets/img/logo.svg" class="logo" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/img/logo<?= (is_singular('expertises')) ? '-dark' : ''; ?>.svg" class="logo" alt="">
                 </a>
             </div>
             <div class="col-sm-5 text-right">
                 <ul>
-                    <li class="lang active low-space">
+                    <!--<li class="lang active low-space">
                         <a href="">
                             FR
                         </a>
@@ -413,7 +410,7 @@
                         <a href="">
                             EN
                         </a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="" class="button open-contact">Contact</a>
                     </li>

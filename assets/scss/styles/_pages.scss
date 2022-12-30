@@ -382,6 +382,11 @@ section {
     background-image: url('../img/arrow-slider.svg');
     background-position: center;
     background-repeat: no-repeat;
+    cursor: pointer;
+    transition: .3s;
+    &:hover{
+      background-color: #FFF;
+    }
 
     &.prev-slider{
       right: 5vw;
@@ -548,6 +553,11 @@ section {
     color: $color-light-gold;
     border-color: $color-light-gold;
     z-index: 4;
+
+    &:hover{
+      background-color: $color-light-gold;
+      color: #FFF;
+    }
   }
 }
 

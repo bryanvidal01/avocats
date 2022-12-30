@@ -148,7 +148,9 @@ if($page_home_hero_background){
                 <?php endif; ?>
 
                 <div class="wording-presentation">
-                    <?= $page_home_key_word['page_home_key_words_item_description']; ?>
+                    <p>
+                        <?= $page_home_key_word['page_home_key_words_item_description']; ?>
+                    </p>
                 </div>
             </div>
         <?php endforeach; ?>

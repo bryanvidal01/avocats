@@ -101,6 +101,7 @@ p{
     letter-spacing: -.05em;
     font-weight: 500;
     font-size: .9vw;
+    transition: .3s;
 
     &:hover{
         background: $color-dark-blue;

@@ -153,7 +153,8 @@ export default homePage => {
 
 
     $('.button-menu').click(function(){
-       $('body').toggleClass('nav-open');
+       $('.menu-fixed').fadeToggle(300);
+        $('body').toggleClass('nav-open');
     });
 
     // Forms
