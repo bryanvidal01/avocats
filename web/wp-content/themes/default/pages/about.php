@@ -11,10 +11,12 @@ get_header();
     <div class="content-hero">
         <p>À propos</p>
         <div class="title-h1" >
-            <i>Une équipe</i><br/>
-            dédiée à<br/>
-            <i>votre défenses</i>
+            “la réussite appartient<br/>
+            <i>à tout le monde.</i> C’est au travail d’équipe <i>qu’en revient </i>le mérite.”<br/>
         </div>
+        <p style="margin-top: 2vw">
+            Franck PICCARD
+        </p>
     </div>
 </div>
 

@@ -8,10 +8,12 @@ get_header();
     <div class="content-hero">
         <p>Expertises</p>
         <div class="title-h1" >
-            la compétence<br/>
-            <i>au service de</i><br/>
-            vos intérêts
+            “On ne parle jamais de l'expert et du praticien qu'il dût être
+            dans une carrière qui exige des dons naturels”
         </div>
+        <p style="margin-top: 2vw">
+            Paul Valéry
+        </p>
     </div>
 </div>
 
@@ -42,7 +44,7 @@ get_header();
             $post_competence_image = get_field('post_competence_image');
 
             if($post_competence_image){
-                $post_competence_image_url = getImageArray($post_competence_image, '1920_1080');
+                $post_competence_image_url = getImageArray($post_competence_image, 'full');
             }
             ?>
 

@@ -639,6 +639,26 @@ section {
 
 .strate-text-left{
   margin-bottom: 5vw;
+
+  ul{
+    li{
+      font-size: 1.1vw;
+      position: relative;
+      padding-left: 0.9vw;
+      color: $color-dark-blue;
+      &:before{
+        content: '';
+        width: .3vw;
+        height: .3vw;
+        display: inline-block;
+        background-color: $color-dark-blue;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 0.6vw;
+      }
+    }
+  }
 }
 
 .container-items-competences{
