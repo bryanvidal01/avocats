@@ -60,7 +60,7 @@
     .content-hero{
       bottom: auto;
       top: 50%;
-      transform: translateY(-50%);
+      transform: translateY(-40%);
 
       .title-h1{
         color: #FFF;
@@ -497,7 +497,7 @@ section {
   margin-top: 4vw;
   .push-team-image{
     width: 100%;
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
   }
 
   .push-team-name{
@@ -508,7 +508,7 @@ section {
   }
   .push-team-post{
     color: $color-dark-gold;
-    margin-top: 1.5vw;
+    margin-top: 0.5vw;
     font-size: 1.2vw;
   }
 }
@@ -719,6 +719,7 @@ section {
     position: absolute;
     padding: 3vw;
     height: 100vh;
+    overflow: auto;
 
     .image-user{
       margin-bottom: 2vw;
@@ -754,5 +755,24 @@ section {
         }
       }
     }
+  }
+}
+
+
+.loader{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: $color-dark-blue;
+  z-index: 800;
+
+  .img-loader{
+    width: 15%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }

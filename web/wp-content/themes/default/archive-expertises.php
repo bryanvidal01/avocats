@@ -11,7 +11,7 @@ get_header();
             “On ne parle jamais de l'expert et du praticien qu'il dût être
             dans une carrière qui exige des dons naturels”
         </div>
-        <p style="margin-top: 2vw">
+        <p style="margin-top: 2vw; margin-bottom: 0;">
             Paul Valéry
         </p>
     </div>

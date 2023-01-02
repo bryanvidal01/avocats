@@ -154,11 +154,7 @@
     <meta name="description" content="<?php echo $siteDescription; ?>">
 
     <!-- Copy & Paste Real Favicon Geenerator code : http://realfavicongenerator.net -->
-    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/site.webmanifest" crossorigin="use-credentials">
-    <link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <!-- Apple Mobile -->
@@ -166,7 +162,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/startup.png">
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/favicon.ico">
     <meta name='HandheldFriendly' content='true' />
     <meta name='format-detection' content='telephone=no' />
     <meta name="msapplication-tap-highlight" content="no">
@@ -204,6 +199,9 @@
 <body <?php body_class(); ?> data-module="homePage">
 
 
+<div class="loader">
+    <img src="<?= get_template_directory_uri(); ?>/assets/img/loader.svg" class="img-loader" alt="">
+</div>
 <div class="button-contact open-contact">
     <img src="<?= get_template_directory_uri(); ?>/assets/img/button-contact.svg" alt="">
 </div>

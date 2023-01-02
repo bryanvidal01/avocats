@@ -10,6 +10,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default homePage => {
 
+
+    setTimeout(function(){
+        $('.loader').fadeOut();
+    }, 400);
+
+
+
     const swiper = new Swiper('.swiper', {
         loop: true,
         speed : 600,
@@ -213,7 +220,13 @@ export default homePage => {
         $('.content-popin .name').html(firstname);
         $('.content-popin .family-name').html(secondname);
         $('.content-popin .post').html(post);
-        $('.content-popin .social a').attr('href', linkedin);
+        if(linkedin){
+            $('.content-popin .social a').fadeIn(0);
+            $('.content-popin .social a').attr('href', linkedin);
+        }else{
+            $('.content-popin .social a').fadeOut(0);
+        }
+
         $('.content-popin .email').html(email);
         $('.content-popin .phone').html(phone);
         $('.content-popin .vcard').attr('href', vcard);
@@ -222,7 +235,6 @@ export default homePage => {
 
        $('.popin-members').fadeIn();
     });
-
 
 
 
