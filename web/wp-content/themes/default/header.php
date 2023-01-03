@@ -320,7 +320,7 @@
                 <a href="<?php echo get_post_type_archive_link('expertises'); ?>" class="title-h2">Expertises</a>
             </li>
             <li>
-                <a href="#" class="title-h2">Actualités</a>
+                <a href="<?= get_site_url(); ?>/blog/" class="title-h2">Actualités</a>
             </li>
 
         </ul>
@@ -370,14 +370,14 @@
     </div>
 
     <button class="button-menu">
-        <div class="wording">Menu</div>
+        <div class="wording close">Fermer</div>
     </button>
 
 </div>
 
 <div id="scroll-container" data-scroll-container>
 
-<header<?= (is_singular('expertises') || get_the_id() == get_field('params_page_mentions', 'option')) ? ' class="dark"' : ''; ?>>
+<header<?= (is_singular('expertises') || is_single() || get_the_id() == get_field('params_page_mentions', 'option')) ? ' class="dark"' : ''; ?>>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-5">
@@ -397,14 +397,14 @@
                             <a href="<?php echo get_the_permalink(get_field('params_page_honoraires', 'option')); ?>">Honoraires</a>
                         </li>
                     <?php endif; ?>
-                    <li>
-                        <a href="#">Actualités</a>
+                    <li <?= (is_archive() && !is_post_type_archive('expertises', 'option') || is_single() && !is_singular('expertises')) ? 'class="is-active"' : ''; ?>>
+                        <a href="<?= get_site_url(); ?>/blog/">Actualités</a>
                     </li>
                 </ul>
             </div>
             <div class="col-sm-2">
                 <a href="<?= get_site_url(); ?>">
-                    <img src="<?= get_template_directory_uri(); ?>/assets/img/logo<?= (is_singular('expertises') || get_the_id() == get_field('params_page_mentions', 'option')) ? '-dark' : ''; ?>.svg" class="logo" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/img/logo<?= (is_single('expertises') || is_single() || get_the_id() == get_field('params_page_mentions', 'option')) ? '-dark' : ''; ?>.svg" class="logo" alt="">
                 </a>
             </div>
             <div class="col-sm-5 text-right">

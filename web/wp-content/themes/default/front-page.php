@@ -330,7 +330,6 @@ if($page_home_recompense_image){
     </div>
 </div>
 
-<!--
 <div class="section-blog container-gutters">
     <div class="container-fluid">
         <div class="row">
@@ -341,118 +340,58 @@ if($page_home_recompense_image){
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4">
-                <div class="article">
-                    <div class="article-label">
-                        La filiation et l’état civil
-                    </div>
-                    <div class="article-title legend">
-                        La conformité des règles de prescription de l’action en contestation de paternité avec l’article 8 de la Convention européenne des droits de l’Homme
+
+            <?php
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 6,
+                'order_by' => 'date'
+            );
+
+            $the_query = new WP_Query( $args );
+
+            if ( $the_query->have_posts() ) {
+                while ( $the_query->have_posts() ) {
+                    $the_query->the_post();
+                    global $post;
+                    $categories = get_the_category();
+                    $categorie = reset($categories);
+                    $authorID = $post->post_author;
+                    ?>
+
+                    <div class="col-sm-4">
+                        <a href="<?= get_the_permalink(); ?>" class="article">
+                            <div class="article-label">
+                                <?= $categorie->name; ?>
+                            </div>
+                            <div class="article-title legend">
+                                <?= get_the_title(); ?>
+                            </div>
+
+                            <div class="article-author">
+                                <?php echo get_the_author_meta( 'nickname', $authorID ); ?>
+                            </div>
+                            <div class="article-date">
+                                <?= get_the_date('d M Y'); ?>
+                            </div>
+                        </a>
                     </div>
 
-                    <div class="article-author">
-                        Alice Bouissou
-                    </div>
-                    <div class="article-date">
-                        5 Août 2022
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="article">
-                    <div class="article-label">
-                        La filiation et l’état civil
-                    </div>
-                    <div class="article-title legend">
-                        La conformité des règles de prescription de l’action en contestation de paternité avec l’article 8 de la Convention européenne des droits de l’Homme
-                    </div>
 
-                    <div class="article-author">
-                        Alice Bouissou
-                    </div>
-                    <div class="article-date">
-                        5 Août 2022
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="article">
-                    <div class="article-label">
-                        La filiation et l’état civil
-                    </div>
-                    <div class="article-title legend">
-                        La conformité des règles de prescription de l’action en contestation de paternité avec l’article 8 de la Convention européenne des droits de l’Homme
-                    </div>
-
-                    <div class="article-author">
-                        Alice Bouissou
-                    </div>
-                    <div class="article-date">
-                        5 Août 2022
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="article">
-                    <div class="article-label">
-                        La filiation et l’état civil
-                    </div>
-                    <div class="article-title legend">
-                        La conformité des règles de prescription de l’action en contestation de paternité avec l’article 8 de la Convention européenne des droits de l’Homme
-                    </div>
-
-                    <div class="article-author">
-                        Alice Bouissou
-                    </div>
-                    <div class="article-date">
-                        5 Août 2022
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="article">
-                    <div class="article-label">
-                        La filiation et l’état civil
-                    </div>
-                    <div class="article-title legend">
-                        La conformité des règles de prescription de l’action en contestation de paternité avec l’article 8 de la Convention européenne des droits de l’Homme
-                    </div>
-
-                    <div class="article-author">
-                        Alice Bouissou
-                    </div>
-                    <div class="article-date">
-                        5 Août 2022
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="article">
-                    <div class="article-label">
-                        La filiation et l’état civil
-                    </div>
-                    <div class="article-title legend">
-                        La conformité des règles de prescription de l’action en contestation de paternité avec l’article 8 de la Convention européenne des droits de l’Homme
-                    </div>
-
-                    <div class="article-author">
-                        Alice Bouissou
-                    </div>
-                    <div class="article-date">
-                        5 Août 2022
-                    </div>
-                </div>
-            </div>
+                <?php }
+            }
+            wp_reset_postdata();
+            ?>
         </div>
         <div class="row">
             <div class="col-sm-12 text-right">
-                <a href="" class="button">
+                <a href="<?= get_site_url(); ?>/blog/" class="button">
                     Toutes les actualités
                 </a>
             </div>
         </div>
     </div>
 </div>
--->
+
 <?php
 get_footer();

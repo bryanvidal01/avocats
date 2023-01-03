@@ -70,7 +70,7 @@ get_header();
                             <?= get_field('post_competence_short_desc'); ?>
                         </p>
                         <a href="<?= get_permalink(); ?>" class="button">
-                            <?= __('Découvrir', 'cresc'); ?>
+                            <?= __('En savoir plus', 'cresc'); ?>
                         </a>
                     </div>
                 </div>

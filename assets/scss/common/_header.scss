@@ -115,6 +115,7 @@ header{
     height: 1px;
     background: $color-dark-beige;
     position: absolute;
+    transition: .3s;
     right: 0;
   }
 
@@ -189,12 +190,20 @@ header{
 
 .nav-open{
 
-
   .button-menu{
     color: $color-dark-blue;
 
     &:before, &:after{
       background-color: $color-dark-blue;
+    }
+
+    &:before{
+      transform: rotate(45deg);
+      top: 50%;
+    }
+    &:after{
+      transform: rotate(-45deg);
+      top: 50%;
     }
   }
 }

@@ -98,7 +98,7 @@ function send_message()
 
         $headers = array('Content-Type: text/html; charset=UTF-8');
 
-        wp_mail( 'orizon.paris@gmail.com', 'Nouveau message via site internet', $message, $headers );
+        wp_mail( 'e.mulon@mulon-associes.com ', 'Nouveau message via site internet', $message, $headers );
         $status['code'] = 200;
     }else{
         $status['code'] = 500;
