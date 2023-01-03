@@ -287,6 +287,7 @@ section {
 
   .scroll-X{
     height: 90vh;
+    padding-top: 5vw;
   }
 
   .all-know-cta{
@@ -774,5 +775,265 @@ section {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+.name-in-mobile{
+  display: none;
+}
+
+.visible-xs{
+  display: none;
+}
+
+.section-mentions{
+  padding-bottom: 6vw !important;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 825px) {
+
+  .visible-xs{
+    display: block;
+  }
+  .hero .content-hero{
+
+    width: 100%;
+    left: 0;
+  }
+
+  .presentation-section .markee{
+    display: none;
+  }
+  .hero .content-hero{
+    //top: 50%;
+    //bottom: auto;
+    //transform: translateY(-50%);
+    bottom: 10vw;
+  }
+
+  .hero{
+    height: 80vh;
+    .title-h1{
+      div{
+        font-size: 3.2vw !important;
+        line-height: 3.5vw;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .hero .content-hero .scroll-bottom{
+    &:before{
+      height: 20vw;
+      margin-top: 15vw;
+    }
+  }
+
+  .section-presentation{
+    margin-top: 12vw;
+  }
+
+  .section-presentation .section-presentation-image-1{
+    width: 100%;
+    margin-top: 6vw;
+  }
+
+  .section-presentation .section-presentation-image-2{
+    display: none;
+  }
+
+  .section-presentation .info-container{
+    padding: 5vw 0 16vw;
+  }
+  .section-presentation .info-container .button{
+    margin-top: 8vw;
+  }
+  .name-in-mobile{
+    position: absolute;
+    top: 30%;
+    display: block;
+    z-index: 30;
+
+    width: 100%;
+    text-align: center;
+    color: #E9E0CF;
+    font-size: 10.4vw !important;
+    line-height: 15.4vw !important;
+  }
+
+  section .scroll-X{
+    width: 100%;
+  }
+
+  .section-citation.with-image .image-bg{
+    left: 50%;
+    top: 50%;
+  }
+
+  .slider-section .card-slider-section{
+    height: 50vh;
+  }
+
+  .slider-section{
+    display: block;
+    height: auto;
+    margin-bottom: 15vw;
+    .scroll-X{
+      height: auto !important;
+    }
+  }
+
+  .slider-section .content-card .discover-card{
+    font-size: 3.2vw;
+    line-height: 3.5vw;
+
+    &:before{
+      height: 20vw;
+      margin: 11vw auto;
+    }
+  }
+
+  .section-slider-wins{
+    height: 50vh;
+    .swiper-slide{
+      height: 50vh;
+    }
+  }
+
+  .section-win-book{
+    .title-h3{
+      margin-bottom: 5vw;
+    }
+
+    .button{
+      margin-top: 6vw;
+      margin-bottom: 6vw;
+    }
+  }
+
+  .slider-section .all-know-cta{
+    display: none;
+  }
+
+  footer .container-footer-principal, .sub-footer .container-footer-principal{
+    padding-top: 10vw;
+
+    .button{
+      margin-bottom: 6vw;
+      width: 100%;
+      text-align: center;
+    }
+    .text-right{
+      text-align: left;
+    }
+  }
+
+  .loader .img-loader{
+    width: 40%;
+  }
+
+  .section-know{
+    margin-top: 16vw;
+  }
+
+  .section-win-book{
+    margin-top: 12vw;
+    margin-bottom: 12vw;
+  }
+
+  .presentation-section{
+    margin-top: 12vw;
+  }
+
+  .presentation-section .item-presentation .image-1{
+    width: 25%;
+    left: 0;
+    margin-left: 5vw;
+    height: auto;
+    position: relative;
+    top: 0;
+    margin-top: 5%;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  .presentation-section .item-presentation .image-2{
+    width: 50%;
+    height: auto;
+    position: relative;
+    top: 0;
+    margin-top: 5%;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  .presentation-section .item-presentation .image-3{
+    width: 25%;
+    height: auto;
+    position: relative;
+    bottom: 0;
+    right: auto;
+    margin-right: 5vw;
+    margin-top: 5%;
+    margin-left: auto;
+    img{
+      width: 100%;
+    }
+  }
+
+  .section-presentation.about .info-container{
+    padding-left: 0;
+  }
+
+  .section-presentation.about .section-presentation-image-1{
+    width: 100%;
+  }
+  .section-presentation.about .section-presentation-image-2{
+    display: none;
+  }
+
+  .push-team .push-team-post{
+    font-size: 4.2vw;
+    line-height: 5.5vw;
+  }
+  .strate-teams .title-section{
+    padding-top: 12vw;
+  }
+  .push-team{
+    margin-bottom: 4vw;
+  }
+  .push-team .push-team-name{
+    margin-top: 4vw;
+  }
+
+  .push-related, .push-honoraire{
+    margin-bottom: 6vw;
+  }
+
+  .strate-image-text .container-image{
+    padding: 7vw 0;
+  }
+
+  .container-expertises .container-expertise-item .content-expertise{
+    padding: 5vw 0;
+  }
+  .container-expertises .container-expertise-item .content-expertise p{
+    max-width: 100%;
+  }
+
+  .container-expertises .container-expertise-item .content-expertise .button{
+    width: 100%;
+    text-align: center;
+  }
+
+  section{
+    height: auto;
+  }
+  section .scroll-X{
+    height: auto;
   }
 }

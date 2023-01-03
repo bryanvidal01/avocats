@@ -234,47 +234,51 @@
                     </p>
                 </div>
                 <div class="col-sm-6 text-right">
-                    <a href="" class="button">
+                    <a href="https://www.google.com/maps/place/27+Rue+Duret,+75116+Paris/@48.8750597,2.2840734,17z/data=!3m1!4b1!4m5!3m4!1s0x47e66ff309cea4f5:0x4169cdb4d977959b!8m2!3d48.8750597!4d2.2862621?hl=fr" target="_blank" class="button hidden-xs">
                         Google Maps
                     </a>
                 </div>
             </div>
 
             <form class="row form-contact">
+                <div class="message-success title-h3">
+                    Votre message a bien été envoyé
+                </div>
+                <div class="col-sm-12">
+                    <p class="error-message">Tous les champs doivent être renseignés</p>
+                </div>
                 <div class="col-sm-6">
                     <label>
                         <span class="text-label">Nom</span>
-                        <input type="text">
+                        <input type="text" name="firstName">
                     </label>
                 </div>
                 <div class="col-sm-6">
                     <label>
                         <span class="text-label">Prénom</span>
-                        <input type="text">
+                        <input type="text" name="secondName">
                     </label>
                 </div>
                 <div class="col-sm-6">
                     <label>
                         <span class="text-label">Téléphone</span>
-                        <input type="text">
+                        <input type="text" name="phone">
                     </label>
                 </div>
                 <div class="col-sm-6">
                     <label>
                         <span class="text-label">Adresse e-mail</span>
-                        <input type="text">
+                        <input type="text" name="email">
                     </label>
                 </div>
                 <div class="col-sm-12">
                     <label>
-                        <select name="pets" id="pet-select">
-                            <option value="">Please choose an option</option>
-                            <option value="dog">Dog</option>
-                            <option value="cat">Cat</option>
-                            <option value="hamster">Hamster</option>
-                            <option value="parrot">Parrot</option>
-                            <option value="spider">Spider</option>
-                            <option value="goldfish">Goldfish</option>
+                        <select name="subject" id="subjects">
+                            <option value="">Séléctionnez un sujet</option>
+                            <option value="sujet-1">Je souhaite prendre rendez-vous</option>
+                            <option value="sujet-2">J'ai un litige </option>
+                            <option value="sujet-3">Je souhaite prendre contact avec vous</option>
+                            <option value="sujet-4">Je souhaite avoir des informations sur votre cabinet</option>
                         </select>
 
                     </label>
@@ -282,7 +286,7 @@
                 <div class="col-sm-12">
                     <label>
                         <span class="text-label">Votre message</span>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <textarea name="message" id="" cols="30" rows="10"></textarea>
                     </label>
                 </div>
                 <div class="col-sm-12 text-right">
@@ -304,6 +308,7 @@
     </div>
 
     <div class="container-menu-sub">
+        <img src="<?= get_template_directory_uri(); ?>/medias/image-header.jpg" class="image-menu-open" alt="">
         <ul>
             <li>
                 <a href="<?php echo get_the_permalink(get_field('params_page_about', 'option')); ?>" class="title-h2">À propos</a>
@@ -313,6 +318,9 @@
             </li>
             <li>
                 <a href="<?php echo get_post_type_archive_link('expertises'); ?>" class="title-h2">Expertises</a>
+            </li>
+            <li>
+                <a href="#" class="title-h2">Actualités</a>
             </li>
 
         </ul>
@@ -326,7 +334,6 @@
             Tél. : +33 1 42 68 24 24<br/>
             Fax : +33 1 42 68 24 30
         </p>
-        <img src="<?= get_template_directory_uri(); ?>/assets/img/certif-2.png" alt="">
     </div>
 
     <div class="sub-footer">
@@ -370,11 +377,11 @@
 
 <div id="scroll-container" data-scroll-container>
 
-<header<?= (is_singular('expertises')) ? ' class="dark"' : ''; ?>>
+<header<?= (is_singular('expertises') || get_the_id() == get_field('params_page_mentions', 'option')) ? ' class="dark"' : ''; ?>>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-5">
-                <ul>
+                <ul class="hidden-xs">
                     <?php if(get_field('params_page_about', 'option')): ?>
                         <li <?= (get_field('params_page_about', 'option') == get_the_id()) ? 'class="is-active"' : ''; ?>>
                             <a href="<?php echo get_the_permalink(get_field('params_page_about', 'option')); ?>">À propos</a>
@@ -390,11 +397,14 @@
                             <a href="<?php echo get_the_permalink(get_field('params_page_honoraires', 'option')); ?>">Honoraires</a>
                         </li>
                     <?php endif; ?>
+                    <li>
+                        <a href="#">Actualités</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-sm-2">
                 <a href="<?= get_site_url(); ?>">
-                    <img src="<?= get_template_directory_uri(); ?>/assets/img/logo<?= (is_singular('expertises')) ? '-dark' : ''; ?>.svg" class="logo" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/img/logo<?= (is_singular('expertises') || get_the_id() == get_field('params_page_mentions', 'option')) ? '-dark' : ''; ?>.svg" class="logo" alt="">
                 </a>
             </div>
             <div class="col-sm-5 text-right">
@@ -410,7 +420,7 @@
                         </a>
                     </li> -->
                     <li>
-                        <a href="" class="button open-contact">Contact</a>
+                        <a href="" class="button open-contact hidden-xs">Contact</a>
                     </li>
                     <li class="last">
                         <button class="button-menu">

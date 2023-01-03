@@ -27,7 +27,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-4">
-                   <p class="copyright"> © Chauveau Mulon & Associés 2023 | Tous droits réservés</p>
+                   <p class="copyright"> © Chauveau Mulon & Associés <?= date("Y"); ?> | Tous droits réservés</p>
                 </div>
                 <div class="col-sm-4 text-center">
                     <img src="<?= get_template_directory_uri(); ?>/medias/partners.png" class="partners-footer" alt="">
@@ -52,7 +52,7 @@
                     </ul>
                 </div>
                 <div class="col-sm-2 text-right">
-                    <a href="" class="link-mentions">Mentions légales</a>
+                    <a href="<?= get_the_permalink(get_field('params_page_mentions', 'option')); ?>" class="link-mentions">Mentions légales</a>
                 </div>
             </div>
         </div>

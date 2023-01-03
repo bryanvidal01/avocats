@@ -157,6 +157,11 @@ header{
     left: 4vw;
     width: 66%;
 
+    .image-menu-open{
+      width: 22%;
+      margin-bottom: 4vw;
+    }
+
     li{
       width: 45%;
       margin-bottom: 2.5vw;
@@ -243,6 +248,19 @@ header{
     }
 
     .form-contact{
+      position: relative;
+      .message-success{
+        background-color: #FFF7E8;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: 3;
+        left: 0;
+        padding-top: 6vw;
+        text-align: center;
+        display: none;
+      }
       label{
         width: 100%;
         position: relative;
@@ -320,5 +338,172 @@ header{
   cursor: pointer;
   img{
     width: 5vw;
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .hidden-xs{
+    display: none;
+  }
+
+  header{
+    .logo{
+      width: 30%;
+      margin-left: 15px;
+      margin-top: 20px;
+    }
+  }
+
+  .button-menu{
+    font-size: 16px;
+    padding-right: 40px;
+    top: 35px;
+    right: 30px;
+    &:before, &:after{
+      width: 30px;
+    }
+
+    &:before{
+      top: calc(50% - 5px);
+    }
+    &:after{
+      top: calc(50% + 5px);
+    }
+  }
+
+  .menu-fixed .container-menu-sub {
+    bottom: auto;
+    width: 100%;
+    position: relative;
+    top: 40%;
+    //padding-top: 40%;
+    left: 0;
+    padding-left: 5vw;
+    li{
+      width: 100%;
+    }
+  }
+  .menu-fixed .sub-section{
+    width: 100%;
+    text-align: left;
+    right: auto;
+    position: absolute;
+    bottom: 30px;
+    margin-top: 16vw;
+    padding-left: 5vw;
+
+    img{
+      display: none;
+    }
+  }
+
+  .menu-fixed .sub-footer{
+    display: none;
+  }
+  .menu-fixed .logo{
+    width: 27%;
+    margin-left: 30px;
+    margin-top: 30px;
+    left: 0;
+    top: 0;
+    transform: translate(0,0);
+  }
+
+  .popin-contact{
+    position: fixed;
+    z-index: 900;
+  }
+  .popin-contact .container-form{
+    width: 100%;
+  }
+
+  .popin-contact .container-form p{
+    font-size: 4.2vw;
+    line-height: 5.5vw;
+  }
+
+  .popin-contact .container-form .form-contact input, .popin-contact .container-form .form-contact select, .popin-contact .container-form .form-contact textarea{
+    font-size: 4.2vw !important;
+    line-height: 5.5vw;
+    margin-bottom: 2vw;
+    padding-top: 6vw;
+  }
+  .popin-contact .container-form .form-contact .text-label{
+    font-size: 4.2vw !important;
+    top: 6.8vw;
+  }
+  .popin-contact .container-form .form-contact textarea{
+    height: 20vw;
+  }
+  .popin-contact .container-form .form-contact{
+    label{
+      &.selected{
+        .text-label{
+          top: 0;
+        }
+      }
+    }
+  }
+
+  .popin-contact .close-popin{
+    position: absolute;
+    width: 14vw;
+    top: 15px;
+    right: 15px;
+  }
+  .popin-contact .container-form .title-h2{
+    margin-top: 10vw;
+  }
+
+  .popin-contact .container-form .form-contact button{
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .popin-members{
+    width: 100%;
+  }
+  .popin-members .content-popin{
+    width: 100%;
+  }
+  .popin-members .content-popin .image-user{
+    width: 60%;
+  }
+  .popin-members .content-popin h2{
+    font-size: 8.4vw;
+    line-height: 9.4vw;
+    margin-top: 3vw;
+  }
+  .popin-members .content-popin .post{
+    font-size: 4.2vw;
+    line-height: 5.5vw;
+  }
+  .popin-members .content-popin .social li img{
+    width: 4vw;
+  }
+  .popin-members .content-popin p{
+    font-size: 4.2vw;
+    line-height: 5.5vw;
+  }
+  .popin-members{
+    .close-popin{
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+    .description{
+      margin-top: 6vw;
+    }
+  }
+
+  .popin-members .content-popin .social{
+    display: block;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+  }
+
+  .menu-fixed .container-menu-sub .image-menu-open{
+    display: none;
   }
 }

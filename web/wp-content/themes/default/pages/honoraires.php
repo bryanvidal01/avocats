@@ -9,12 +9,10 @@ get_header();
     <div class="content-hero">
         <p>À propos</p>
         <div class="title-h1" >
-            le seul intérêt<br/>
-            <i>de l’argent</i><br/>
-            est son emploi
+            on s’inquiète souvent de choses qui finissent pas avoir de bons résultats
         </div>
         <p style="margin-top: 2vw">
-            Benjamin franklin
+            Proverbe turc
         </p>
     </div>
 </div>

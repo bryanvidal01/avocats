@@ -6,13 +6,12 @@ get_header();
     <img src="<?= get_template_directory_uri(); ?>/medias/19.jpg" data-scroll data-scroll-speed="-1" class="img-hero" alt="">
 
     <div class="content-hero">
-        <p>Expertises</p>
+        <p>Expertise</p>
         <div class="title-h1" >
-            “On ne parle jamais de l'expert et du praticien qu'il dût être
-            dans une carrière qui exige des dons naturels”
+            “l’expérience elle-même est un mode de connaissance qui exige le concours de l’entendement”
         </div>
         <p style="margin-top: 2vw; margin-bottom: 0;">
-            Paul Valéry
+            Emmanuel KANT
         </p>
     </div>
 </div>
@@ -21,7 +20,7 @@ get_header();
     <div class="row">
         <div class="col-sm-12 text-center">
             <div class="title-h2">
-                nos domaines d’expertises
+                nos domaines d’expertise
             </div>
         </div>
     </div>
@@ -50,12 +49,18 @@ get_header();
 
             <div class="row container-expertise-item">
                 <?php if ($i%2 == 1): ?>
-                <div class="col-sm-6">
+                <div class="col-sm-6 hidden-xs">
                     <div class="container-image-expertise">
                         <img src="<?= $post_competence_image_url['url'] ?>" class="image-expertise" alt="">
                     </div>
                 </div>
                 <?php endif; ?>
+                <div class="col-sm-6 visible-xs">
+                    <div class="container-image-expertise">
+                        <img src="<?= $post_competence_image_url['url'] ?>" class="image-expertise" alt="">
+                    </div>
+                </div>
+
                 <div class="col-sm-6">
                     <div class="content-expertise">
                         <div class="title-h2">
@@ -70,7 +75,7 @@ get_header();
                     </div>
                 </div>
                 <?php if ($i%2 != 1): ?>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 hidden-xs">
                         <div class="container-image-expertise">
                             <img src="<?= $post_competence_image_url['url'] ?>" class="image-expertise" alt="">
                         </div>

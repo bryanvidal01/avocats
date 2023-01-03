@@ -70,7 +70,7 @@ if($page_home_hero_background){
             <div class="col-sm-5">
                 <div class="info-container">
                     <?= $page_home_valeurs_text; ?>
-                    <a href="" class="button">
+                    <a href="<?php echo get_the_permalink(get_field('params_page_about', 'option')); ?>" class="button">
                         Découvrez notre cabinet
                     </a>
                 </div>
@@ -107,6 +107,8 @@ if($page_home_hero_background){
     </div>
     <div class="scroll-X">
 
+        <div class="swiper-wrapper">
+
         <?php
             foreach ($page_home_key_words as $page_home_key_word):
                 $page_home_key_words_item_image_1 = $page_home_key_word['page_home_key_words_item_image_1'];
@@ -128,7 +130,11 @@ if($page_home_hero_background){
                 }
 
         ?>
-            <div class="item-presentation js-scroll-X-subsection" data-title="<?= $page_home_key_word['page_home_key_words_item_title']; ?>">
+            <div class="item-presentation js-scroll-X-subsection swiper-slide" data-title="<?= $page_home_key_word['page_home_key_words_item_title']; ?>">
+
+                <div class="name-in-mobile title-h2">
+                    <?= $page_home_key_word['page_home_key_words_item_title']; ?>
+                </div>
                 <?php if($page_home_key_words_item_image_1_url['url']): ?>
                 <div class="image-1">
                     <img src="<?= $page_home_key_words_item_image_1_url['url']; ?>" alt="">
@@ -154,32 +160,18 @@ if($page_home_hero_background){
                 </div>
             </div>
         <?php endforeach; ?>
+        </div>
     </div>
 </section>
 
 
-
-<!--
-<div class="section-scroll-x">
-    <div class="item">
-        <div class="image-1">
-            <img src="<?= get_template_directory_uri(); ?>/medias/04.jpg" alt="">
-        </div>
-        <div class="image-2">
-            <img src="<?= get_template_directory_uri(); ?>/medias/06.jpg" alt="">
-        </div>
-        <div class="image-3">
-            <img src="<?= get_template_directory_uri(); ?>/medias/05.jpg" alt="">
-        </div>
-    </div>
-</div>-->
 
 <?php
     $page_home_citation_2_text = get_field('page_home_citation_2_text');
     $page_home_citation_2_image = get_field('page_home_citation_2_image');
 
     if($page_home_citation_2_image){
-        $page_home_citation_2_image_url = getImageArray($page_home_citation_2_image, '640_800');
+        $page_home_citation_2_image_url = getImageArray($page_home_citation_2_image, '1920_1080');
     }
 
 ?>
@@ -216,7 +208,7 @@ $page_home_expertise_description = get_field('page_home_expertise_description');
                     <?= $page_home_expertise_title; ?>
 
             </div>
-            <div class="col-sm-4 offset-2">
+            <div class="col-sm-4 offset-md-2">
                 <div class="content-know">
                     <?= $page_home_expertise_description; ?>
                 </div>
@@ -227,15 +219,13 @@ $page_home_expertise_description = get_field('page_home_expertise_description');
 
 
 <section class="slider-section">
-    <div class="scroll-X">
-
+    <div class="scroll-X ">
+        <div class="swiper-wrapper">
         <?php
 
         $args = array(
             'post_type' => 'expertises',
-            'post__not_in' => array(get_the_id()),
-            'orderby'        => 'rand',
-            'posts_per_page' => -1,
+            'posts_per_page' => -1
 
         );
 
@@ -252,7 +242,7 @@ $page_home_expertise_description = get_field('page_home_expertise_description');
                 }
                 ?>
 
-                <a href="<?= get_the_permalink(); ?>" class="card-slider-section">
+                <a href="<?= get_the_permalink(); ?>" class="card-slider-section swiper-slide">
                     <?php if($post_competence_image_url): ?>
                         <img src="<?= $post_competence_image_url['url']; ?>" alt="">
                     <?php endif; ?>
@@ -271,6 +261,7 @@ $page_home_expertise_description = get_field('page_home_expertise_description');
         }
         wp_reset_postdata();
         ?>
+        </div>
     </div>
 
     <a href="<?php echo get_post_type_archive_link('expertises'); ?>" class="button all-know-cta">
@@ -328,10 +319,10 @@ if($page_home_recompense_image){
             <div class="col-sm-3">
                 <?= $page_home_recompense_title; ?>
             </div>
-            <div class="col-sm-3 offset-2">
+            <div class="col-sm-3 offset-md-2">
                 <?= $page_home_recompense_description; ?>
 
-                <a href="" class="button">
+                <a href="<?php echo get_the_permalink(get_field('params_page_about', 'option')); ?>" class="button">
                     Lire la suite
                 </a>
             </div>

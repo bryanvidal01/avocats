@@ -34,11 +34,11 @@ endif; ?>
     <div class="container-items-competences">
     </div>
     <section class="slider-section">
-        <div class="introduction-section">
+        <div class="introduction-section hidden-xs">
             Voir aussi
         </div>
         <div class="scroll-X">
-
+            <div class="swiper-wrapper">
             <?php
 
             $args = array(
@@ -62,7 +62,7 @@ endif; ?>
                     }
                 ?>
 
-                    <a href="<?= get_the_permalink(); ?>" class="card-slider-section">
+                    <a href="<?= get_the_permalink(); ?>" class="card-slider-section swiper-slide">
                         <?php if($post_competence_image_url): ?>
                         <img src="<?= $post_competence_image_url['url']; ?>" alt="">
                         <?php endif; ?>
@@ -81,6 +81,7 @@ endif; ?>
             }
             wp_reset_postdata();
             ?>
+            </div>
         </div>
 
         <a href="<?php echo get_post_type_archive_link('expertises'); ?>" class="button all-know-cta">

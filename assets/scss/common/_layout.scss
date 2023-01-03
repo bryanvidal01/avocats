@@ -133,3 +133,115 @@ p{
 .text-right{
     text-align: right;
 }
+
+.error-message{
+    color: red;
+    margin-top: 15px;
+    display: none;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .title-h1, h1{
+        font-size: 10vw;
+        line-height: 10.5vw;
+    }
+
+    .title-h2, h2 {
+        font-size: 8.4vw;
+        line-height: 9.4vw;
+    }
+
+    .introduction-section{
+        font-size: 3.2vw;
+        line-height: 3.5vw;
+    }
+
+    .hero .content-hero p{
+        font-size: 3.2vw;
+        line-height: 3.5vw;
+    }
+
+    p{
+        font-size: 4.2vw;
+        line-height: 5.5vw;
+    }
+
+    .button{
+        font-size: 3.2vw;
+        line-height: 3.5vw;
+        padding: 6vw;
+    }
+
+    .section-citation{
+        padding: 12vw 2vw;
+    }
+
+    .presentation-section .wording-presentation{
+
+    }
+
+
+
+    .presentation-section .wording-presentation{
+        width: 100%;
+        padding: 3vw;
+        position: relative;
+        left: 0;
+        top: 0;
+        right: 0;
+        margin-top: 5vw;
+    }
+
+    section .scroll-X{
+        display: block;
+    }
+
+    .title-h4, h4{
+        font-size: 7.4vw;
+        line-height: 7.4vw;
+    }
+
+    .title-h3, h3 {
+        font-size: 6.4vw;
+        line-height: 6.8vw;
+    }
+
+    .introduction-section{
+        &:before{
+            width: 1vw;
+            height: 1vw;
+            top: -1vw;
+        }
+    }
+
+    .hero.about .content-hero{
+        padding: 0 3vw;
+    }
+
+    .hero-single-competence.container-gutters{
+        padding-top: 30vw;
+        .button{
+            display: none;
+        }
+    }
+
+    .strate-text-left ul li{
+        font-size: 4.2vw;
+        line-height: 5.5vw;
+        padding-left: 5vw;
+        margin-bottom: 3vw;
+    }
+
+    .strate-text-left ul li:before{
+        width: 1vw;
+        height: 1vw;
+
+        &:before{
+            top: 2.5vw;
+        }
+    }
+
+
+
+
+}

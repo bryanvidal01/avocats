@@ -1,6 +1,6 @@
 <?php $page_home_key_words = get_sub_field('strate_keywords_items'); ?>
 
-<section class="presentation-section">
+<section class="presentation-section hidden-xs">
     <div class="markee title-h1 big js-wording">
         <div class="text-inner visible">
             <?= $page_home_key_words[0]['strate_keywords_items_word'] ?>

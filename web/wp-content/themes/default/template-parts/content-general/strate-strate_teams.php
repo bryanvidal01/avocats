@@ -67,7 +67,6 @@
 
             $args = array(
                 'post_type' => 'membres',
-                'orderby'        => 'date',
                 'posts_per_page' => -1,
             );
 
@@ -92,7 +91,7 @@
                     }
                     ?>
 
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 col-6">
                         <div class="push-team"
                              data-firstname="<?= $member_second_name; ?>"
                              data-secondname="<?= $member_name; ?>"
