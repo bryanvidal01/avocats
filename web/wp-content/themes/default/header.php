@@ -311,7 +311,7 @@
         <img src="<?= get_template_directory_uri(); ?>/medias/image-header.jpg" class="image-menu-open" alt="">
         <ul>
             <li>
-                <a href="<?php echo get_the_permalink(get_field('params_page_about', 'option')); ?>" class="title-h2">À propos</a>
+                <a href="<?php echo get_the_permalink(get_field('params_page_about', 'option')); ?>" class="title-h2">Le cabinet</a>
             </li>
             <li>
                 <a href="<?php echo get_the_permalink(get_field('params_page_honoraires', 'option')); ?>" class="title-h2">Honoraires</a>
@@ -377,14 +377,14 @@
 
 <div id="scroll-container" data-scroll-container>
 
-<header<?= (is_singular('expertises') || is_single() || get_the_id() == get_field('params_page_mentions', 'option')) ? ' class="dark"' : ''; ?>>
+<header<?= (is_singular('expertises') || is_single() || get_the_id() == get_field('params_page_mentions', 'option') || is_404()) ? ' class="dark"' : ''; ?>>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-5">
                 <ul class="hidden-xs">
                     <?php if(get_field('params_page_about', 'option')): ?>
                         <li <?= (get_field('params_page_about', 'option') == get_the_id()) ? 'class="is-active"' : ''; ?>>
-                            <a href="<?php echo get_the_permalink(get_field('params_page_about', 'option')); ?>">À propos</a>
+                            <a href="<?php echo get_the_permalink(get_field('params_page_about', 'option')); ?>">Le cabinet</a>
                         </li>
                     <?php endif; ?>
                     <li <?= (is_post_type_archive('expertises', 'option') || is_singular('expertises')) ? 'class="is-active"' : ''; ?>>
@@ -404,7 +404,7 @@
             </div>
             <div class="col-sm-2">
                 <a href="<?= get_site_url(); ?>">
-                    <img src="<?= get_template_directory_uri(); ?>/assets/img/logo<?= (is_single('expertises') || is_single() || get_the_id() == get_field('params_page_mentions', 'option')) ? '-dark' : ''; ?>.svg" class="logo" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/assets/img/logo<?= (is_single('expertises') || is_single() || get_the_id() == get_field('params_page_mentions', 'option') || is_404()) ? '-dark' : ''; ?>.svg" class="logo" alt="">
                 </a>
             </div>
             <div class="col-sm-5 text-right">

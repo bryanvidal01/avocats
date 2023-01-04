@@ -85,7 +85,7 @@ endif; ?>
         </div>
 
         <a href="<?php echo get_post_type_archive_link('expertises'); ?>" class="button all-know-cta">
-            <?= __('Tous nos savoir-faire', 'cresc'); ?>
+            <?= __('notre expertise', 'cresc'); ?>
         </a>
     </section>
 </div>

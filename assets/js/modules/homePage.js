@@ -219,7 +219,23 @@ export default homePage => {
 
         $('.popin-contact').fadeOut();
         $('.popin-members').fadeOut();
-    })
+        $('body').removeClass('popin-member-open');
+    });
+
+
+    $(document).mouseup(function(e)
+    {
+        if($('body').hasClass('popin-member-open')){
+            var container = $(".popin-members .content-popin");
+
+            // if the target of the click isn't the container nor a descendant of the container
+            if (!container.is(e.target) && container.has(e.target).length === 0)
+            {
+                $(".popin-members").fadeOut();
+            }
+        }
+    });
+
 
 
     $('.push-team').click(function(){
@@ -235,6 +251,7 @@ export default homePage => {
         var description = el.data('description');
         var image = el.data('image');
 
+        $('body').addClass('popin-member-open');
         $('.content-popin .name').html(firstname);
         $('.content-popin .family-name').html(secondname);
         $('.content-popin .post').html(post);
@@ -245,9 +262,17 @@ export default homePage => {
             $('.content-popin .social a').fadeOut(0);
         }
 
+        if(vcard){
+            $('.content-popin .vcard').fadeIn(0);
+            $('.content-popin .vcard').attr('href', vcard);
+        }else{
+            $('.content-popin .vcard').fadeOut(0);
+        }
+
+
         $('.content-popin .email').html(email);
         $('.content-popin .phone').html(phone);
-        $('.content-popin .vcard').attr('href', vcard);
+
         $('.content-popin .description').html(description);
         $('.content-popin .image-user').attr('src', image);
 

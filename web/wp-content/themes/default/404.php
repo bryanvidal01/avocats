@@ -7,26 +7,16 @@
  */
 
 get_header();
-get_header('nav');
 ?>
-    <main id="main" class="main">
-
-        <?php
-
-        if ( have_posts() ) :
-
-            /* Start the Loop */
-            while ( have_posts() ) :
-                the_post();
-
-                get_template_part( 'template-parts/content', 'post' );
-
-            endwhile;
-
-        endif;
-        ?>
-
-    </main>
+    <div class="container-gutters container-not-found text-center">
+        <div class="title-h1">
+            404
+        </div>
+        <div class="title-h4">
+            La page demandée n'existe pas
+        </div>
+        <a href="<?= get_site_url(); ?>" class="button">Retour à la page d'accueil</a>
+    </div>
 
 <?php
 get_footer();

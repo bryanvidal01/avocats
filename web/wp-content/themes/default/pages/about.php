@@ -9,7 +9,7 @@ get_header();
     <img src="<?= get_template_directory_uri(); ?>/medias/hero-about.jpg" data-scroll data-scroll-speed="-1" class="img-hero" alt="">
 
     <div class="content-hero">
-        <p>À propos</p>
+        <p>le cabinet</p>
         <div class="title-h1" >
             “la réussite appartient<br/>
             <i>à tout le monde.</i> C’est au travail d’équipe <i>qu’en revient </i>le mérite.”<br/>

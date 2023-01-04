@@ -7,9 +7,9 @@ get_header();
     <img src="<?= get_template_directory_uri(); ?>/medias/23.jpg" data-scroll data-scroll-speed="-1" class="img-hero" alt="">
 
     <div class="content-hero">
-        <p>À propos</p>
+        <p>honoraires</p>
         <div class="title-h1" >
-            on s’inquiète souvent de choses qui finissent pas avoir de bons résultats
+            ON S’INQUIÈTE SOUVENT DE CHOSES QUI FINISSENT PAR AVOIR DE BONS RÉSULTATS
         </div>
         <p style="margin-top: 2vw">
             Proverbe turc

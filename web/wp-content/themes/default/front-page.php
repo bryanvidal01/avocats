@@ -265,7 +265,7 @@ $page_home_expertise_description = get_field('page_home_expertise_description');
     </div>
 
     <a href="<?php echo get_post_type_archive_link('expertises'); ?>" class="button all-know-cta">
-        <?= __('Tous nos savoir-faire', 'cresc'); ?>
+        <?= __('notre expertise', 'cresc'); ?>
     </a>
 </section>
 

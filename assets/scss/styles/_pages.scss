@@ -329,6 +329,7 @@ section {
     position: absolute;
     width: 100%;
     z-index: 3;
+    height: 100%;
     top: 50%;
     transform: translateY(-50%);
     left: 0;
@@ -336,10 +337,19 @@ section {
     color: $color-light-gold;
     padding: 3vw;
 
+    .title-h4{
+      top: 50%;
+      position: relative;
+      transform: translateY(-130%);
+    }
+
     .discover-card{
       text-align: center;
       width: 100%;
       font-size: 0.85vw;
+      position: absolute;
+      left: 0;
+      bottom: 4vw;
 
       &:before{
         content: '';
@@ -532,6 +542,7 @@ section {
 
 .push-team{
   margin-top: 4vw;
+  cursor: pointer;
   .push-team-image{
     width: 100%;
     margin-bottom: 1vw;
@@ -936,6 +947,15 @@ section {
         top: 0.6vw;
       }
     }
+  }
+}
+
+.container-not-found{
+  padding-top: 30vh !important;
+  padding-bottom: 30vh !important;
+
+  .title-h4{
+    margin-bottom: 2vw;
   }
 }
 

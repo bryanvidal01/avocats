@@ -91,6 +91,10 @@ header{
         padding: .8vw 1.8vw;
         font-size: .9vw;
         font-weight: 400;
+
+        &:hover{
+          border-color: $color-dark-blue;
+        }
       }
     }
   }
